@@ -16,6 +16,7 @@
 		644B4E7D184A4F4A009F77F7 /* WSAssetWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E76184A4F4A009F77F7 /* WSAssetWrapper.m */; };
 		644B4E80184A5329009F77F7 /* WSAssetViewSelectionIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 644B4E7E184A5329009F77F7 /* WSAssetViewSelectionIndicator.png */; };
 		644B4E81184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 644B4E7F184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png */; };
+		644B4E84184A82F3009F77F7 /* VideoMakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E83184A82F3009F77F7 /* VideoMakerViewController.m */; };
 		64602D3D1849FC89001E3C73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D3C1849FC89001E3C73 /* Foundation.framework */; };
 		64602D3F1849FC89001E3C73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D3E1849FC89001E3C73 /* CoreGraphics.framework */; };
 		64602D411849FC89001E3C73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D401849FC89001E3C73 /* UIKit.framework */; };
@@ -62,6 +63,8 @@
 		644B4E76184A4F4A009F77F7 /* WSAssetWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetWrapper.m; sourceTree = "<group>"; };
 		644B4E7E184A5329009F77F7 /* WSAssetViewSelectionIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSAssetViewSelectionIndicator.png; sourceTree = "<group>"; };
 		644B4E7F184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WSAssetViewSelectionIndicator@2x.png"; sourceTree = "<group>"; };
+		644B4E82184A82F3009F77F7 /* VideoMakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMakerViewController.h; sourceTree = "<group>"; };
+		644B4E83184A82F3009F77F7 /* VideoMakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMakerViewController.m; sourceTree = "<group>"; };
 		64602D391849FC89001E3C73 /* hackours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64602D3C1849FC89001E3C73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		64602D3E1849FC89001E3C73 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,6 +180,8 @@
 				644B4E7E184A5329009F77F7 /* WSAssetViewSelectionIndicator.png */,
 				644B4E7F184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png */,
 				64602D431849FC89001E3C73 /* Supporting Files */,
+				644B4E82184A82F3009F77F7 /* VideoMakerViewController.h */,
+				644B4E83184A82F3009F77F7 /* VideoMakerViewController.m */,
 			);
 			path = hackours;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */,
 				64602D531849FC89001E3C73 /* ViewController.m in Sources */,
 				64602D4D1849FC89001E3C73 /* AppDelegate.m in Sources */,
+				644B4E84184A82F3009F77F7 /* VideoMakerViewController.m in Sources */,
 				644B4E7A184A4F4A009F77F7 /* WSAssetsTableViewCell.m in Sources */,
 				644B4E7C184A4F4A009F77F7 /* WSAssetViewColumn.m in Sources */,
 				644B4E78184A4F4A009F77F7 /* WSAssetPickerController.m in Sources */,

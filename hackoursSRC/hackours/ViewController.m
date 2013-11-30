@@ -99,6 +99,9 @@
     // Tester null pour choix images (10 mini);
     [calibrateController setImageArray:_imageArray];
     
+    //Stop Audio
+    [_audioPlayer stop];
+    
     [self presentViewController:calibrateController animated:YES completion:nil];
 }
 
@@ -138,11 +141,11 @@
     
     //Charge la music choisi dans le lecteur
     MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:0];
-    NSURL *url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+    _url = [item valueForProperty:MPMediaItemPropertyAssetURL];
     
     [[_musicPicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:_url error:&error];
     
     [_labelTitre setText:[item valueForProperty:MPMediaItemPropertyTitle]];
     
