@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WSAssetPicker.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 
-@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MPMediaPickerControllerDelegate, AVAudioPlayerDelegate>
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MPMediaPickerControllerDelegate, AVAudioPlayerDelegate, WSAssetPickerControllerDelegate>
 
 
 //Vue Conteneur
@@ -22,7 +23,8 @@
 
 //VuePhotosView
 @property (weak, nonatomic) IBOutlet UIButton *buttonAjouter;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImage *image;
 
 //Vue MusicView
 @property (weak, nonatomic) IBOutlet UIButton *buttonAjouterMusic;
@@ -33,7 +35,8 @@
 
 
 //PickerView
-@property (nonatomic, retain) UIImagePickerController *imgPicker;
+@property (nonatomic, retain) ALAssetsLibrary *library;
+@property (nonatomic, retain) WSAssetPickerController *controller;
 @property (nonatomic, retain) MPMediaPickerController *musicPicker;
 
 //AudioPlayer

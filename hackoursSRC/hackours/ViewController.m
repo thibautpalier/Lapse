@@ -22,25 +22,25 @@
 @synthesize matserView = _matserView;
 @synthesize photosView = _photosView;
 @synthesize musicView = _musicView;
-@synthesize doneButton = _doneButton;
-@synthesize imgPicker = _imgPicker;
 @synthesize musicPicker = _musicPicker;
 @synthesize buttonAjouter = _buttonAjouter;
 @synthesize imageView = _imageView;
 @synthesize audioPlayer = _audioPlayer;
 @synthesize labelTitre = _labelTitre;
 @synthesize progressView = _progressView;
+@synthesize controller = _controller;
+@synthesize library = _library;
+@synthesize image = _image;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //Initialization imgPicker:
-    _imgPicker = [[UIImagePickerController alloc] init];
-    [_imgPicker setAllowsEditing:YES];
-    [_imgPicker setDelegate:self];
-    [_imgPicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    //initialisation imagepicker
+    _library = [[ALAssetsLibrary alloc] init];
+    _controller = [[WSAssetPickerController alloc] initWithAssetsLibrary:_library];
+    [_controller setDelegate:self];
     
     //Initialisation musicPicker
     _musicPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
@@ -68,14 +68,7 @@
 //--------------------Action des controlleur------------------
 
 - (IBAction)didAjouter:(UIButton *)sender {
-    [self presentViewController:_imgPicker animated:YES completion:nil];
-    
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask ,YES);
-    NSString* documentsPath = [paths objectAtIndex:0];
-    NSString* dataFile = [documentsPath stringByAppendingPathComponent:@"UserCustomPotraitPic1.jpg"];
-    
-    NSData *potraitImgData = [NSData dataWithContentsOfFile:dataFile];
-    //backgroundImagePotrait = [UIImage imageWithData:potraitImgData];
+    [self presentViewController:_controller animated:YES completion:NULL];
 }
 
 - (IBAction)didAjouterMusic:(UIButton *)sender {
@@ -93,46 +86,36 @@
 
 
 //---------------Methode Delegate ImagePickerView------------------
-
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+- (void)assetPickerControllerDidCancel:(WSAssetPickerController *)sender
 {
-    NSLog(@"Inside navigationController ...");
-    if (!_doneButton)
-    {
-        _doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(saveImagesDone:)];
+    // Dismiss the WSAssetPickerController.
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)assetPickerController:(WSAssetPickerController *)sender didFinishPickingMediaWithAssets:(NSArray *)assets
+{
+    
+    
+    /*
+    for (ALAsset *asset in assets) {
+        image = [[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullResolutionImage];
     }
+     */
     
-    viewController.navigationItem.rightBarButtonItem = _doneButton;
-}
-
-- (IBAction)saveImagesDone:(id)sender
-{
-    NSLog(@"saveImagesDone ...");
-    //Fermer le pickerView
-    [[_imgPicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage : (UIImage *)image editingInfo:(NSDictionary *)editingInfo
-{
+    //NSString *imgUrl = [[assets objectAtIndex:1] valueForProperty:ALAssetPropertyURLs];
     
-    _IMAGE_COUNTER = _IMAGE_COUNTER + 1;
-    NSLog(@"didFinishPickingImage ...");
-    _imageView.image = image;
+    //_image = [[UIImage alloc] initWithCGImage:[[[assets objectAtIndex:0] defaultRepresentation] fullScreenImage]];
     
-    // Get the data for the image
-    NSData* imageData = UIImageJPEGRepresentation(image, 1.0);
+    /*CGImageRef images = [[[assets objectAtIndex:0] defaultRepresentation] fullScreenImage];
+    if (images){
+        _image = [UIImage imageWithCGImage:images];
+    }*/
     
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        self.image = [[UIImage alloc] initWithCGImage:[[[assets objectAtIndex:0] defaultRepresentation] fullResolutionImage]];
+        [self.imageView setImage:self.image];
+    }];
     
-    // Give a name to the file
-    NSString* incrementedImgStr = [NSString stringWithFormat: @"img%d.jpg", _IMAGE_COUNTER];
-    
-    
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* documentsDirectory = [paths objectAtIndex:0];
-    // Now we get the full path to the file
-    NSString* fullPathToFile2 = [documentsDirectory stringByAppendingPathComponent:incrementedImgStr];
-    
-    [imageData writeToFile:fullPathToFile2 atomically:NO];
 }
 
 //----------------Methode delegate Music PickerView
