@@ -110,11 +110,13 @@
         {
             if (adaptor.assetWriterInput.readyForMoreMediaData)
             {
-                printf("appending %d attemp %d\n", frameCount, j);
+                double result = _interval * frameCount;
+                printf("Temps d'intersion  :%f \n", result);
+                CMTime frameTimeInterval = CMTimeMakeWithSeconds(result, 100000);
                 
-                CMTime frameTime = CMTimeMake(frameCount,(int32_t) 10);
+                //CMTime frameTime = CMTimeMake(frameCount,(int32_t) 10);
                 
-                append_ok = [adaptor appendPixelBuffer:buffer withPresentationTime:frameTime];
+                append_ok = [adaptor appendPixelBuffer:buffer withPresentationTime:frameTimeInterval];
                 CVPixelBufferPoolRef bufferPool = adaptor.pixelBufferPool;
                 NSParameterAssert(bufferPool != NULL);
                 
