@@ -19,16 +19,18 @@
 @property (strong, nonatomic) NSMutableArray *timingsFromDate;
 @property (strong, nonatomic) NSDate *start;
 @property (nonatomic) int tapNumber;
-@property (weak, nonatomic) NSURL *musicUrl;
 
 //AudioPlayer
 @property AVAudioPlayer *audioPlayer;
 
 //output
 @property (strong, nonatomic) NSMutableArray *imageArray;
+@property (weak, nonatomic) NSURL *musicUrl;
+@property double interval;
 
 // Methods
 - (void)calculEcart;
 - (IBAction)didTap:(id)sender;
-- (void) playMusic;
+- (void) callNextViewController;
+
 @end
