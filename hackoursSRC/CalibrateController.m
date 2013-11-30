@@ -18,6 +18,8 @@
 @synthesize timingsFromDate = _timingsFromDate;
 @synthesize start = _start;
 @synthesize tapNumber = _tapNumber;
+@synthesize musicUrl = _musicUrl;
+@synthesize audioPlayer = _audioPlayer;
 
 
 
@@ -38,7 +40,11 @@
     _timingsFromDate = [[NSMutableArray alloc] initWithCapacity:0];
     _tapNumber = 0;
     
+    
     // Commencer a lire musique
+    NSError *error;
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:_musicUrl error:&error];
+    [self playMusic];
     
     // Start Timing
     _start = [[NSDate alloc] init];
@@ -52,6 +58,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+// ---------------- Controlleurs --------
+
+
+- (IBAction)didTap:(id)sender {
+    if (_tapNumber > 9) {
+        NSLog(@"End");
+        [self calculEcart];
+    } else {
+        NSTimeInterval timeIntervalWithDate = [_start timeIntervalSinceNow];
+        NSNumber *a = [NSNumber numberWithDouble:timeIntervalWithDate];
+        [_timingsFromDate addObject:a];
+        _tapNumber ++;
+    }
+}
+
+
+// --------------- Calculs --------------
 
 - (void)calculEcart{
     
@@ -75,15 +99,10 @@
     NSLog(@"Average : %f", average);
 }
 
-- (IBAction)didTap:(id)sender {
-    if (_tapNumber > 9) {
-        NSLog(@"End");
-        [self calculEcart];
-    } else {
-        NSTimeInterval timeIntervalWithDate = [_start timeIntervalSinceNow];
-        NSNumber *a = [NSNumber numberWithDouble:timeIntervalWithDate];
-        [_timingsFromDate addObject:a];
-        _tapNumber ++;
-    }
+// ------------ Lecteur audio ----------
+- (void) playMusic{
+    [_audioPlayer play];
 }
+
+
 @end

@@ -30,6 +30,7 @@
 @synthesize audioPlayer = _audioPlayer;
 @synthesize labelTitre = _labelTitre;
 @synthesize progressView = _progressView;
+@synthesize url = _url;
 
 
 - (void)viewDidLoad

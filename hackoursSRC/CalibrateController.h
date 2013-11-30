@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface CalibrateController : UIViewController
 
@@ -16,8 +19,14 @@
 @property (strong, nonatomic) NSMutableArray *timingsFromDate;
 @property (strong, nonatomic) NSDate *start;
 @property (nonatomic) int tapNumber;
+@property (weak, nonatomic) NSURL *musicUrl;
+
+
+//AudioPlayer
+@property AVAudioPlayer *audioPlayer;
 
 // Methods
 - (void)calculEcart;
 - (IBAction)didTap:(id)sender;
+- (void) playMusic;
 @end

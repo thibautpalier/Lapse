@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitre;
 @property (weak, nonatomic) IBOutlet UILabel *labelDuration;
+@property (weak, nonatomic) NSURL *url;
 
 
 //PickerView
