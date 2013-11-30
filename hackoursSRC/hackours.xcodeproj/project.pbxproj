@@ -35,7 +35,7 @@
 		FFF13C99184A91C2001E6480 /* @btn_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C98184A91C2001E6480 /* @btn_background.png */; };
 		FFF13C9C184A9212001E6480 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF13C9B184A9212001E6480 /* Colors.m */; };
 		FFF13C9E184A9422001E6480 /* @step1.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C9D184A9422001E6480 /* @step1.png */; };
-		FFF13CA0184A9F37001E6480 /* @step1_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C9F184A9F37001E6480 /* @step1_background.png */; };
+		FFF13CA0184A9F37001E6480 /* step1_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C9F184A9F37001E6480 /* step1_background@2x.png */; };
 		FFF13CA4184AA15A001E6480 /* step1_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13CA3184AA159001E6480 /* step1_background.png */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +95,7 @@
 		FFF13C9A184A9212001E6480 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		FFF13C9B184A9212001E6480 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		FFF13C9D184A9422001E6480 /* @step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@step1.png"; sourceTree = "<group>"; };
-		FFF13C9F184A9F37001E6480 /* @step1_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@step1_background.png"; sourceTree = "<group>"; };
+		FFF13C9F184A9F37001E6480 /* step1_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step1_background@2x.png"; sourceTree = "<group>"; };
 		FFF13CA3184AA159001E6480 /* step1_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF13CA3184AA159001E6480 /* step1_background.png */,
-				FFF13C9F184A9F37001E6480 /* @step1_background.png */,
+				FFF13C9F184A9F37001E6480 /* step1_background@2x.png */,
 				FFF13C9D184A9422001E6480 /* @step1.png */,
 				FFF13C98184A91C2001E6480 /* @btn_background.png */,
 				64602D441849FC89001E3C73 /* hackours-Info.plist */,
@@ -312,7 +312,7 @@
 				FFF13C9E184A9422001E6480 /* @step1.png in Resources */,
 				644B4E81184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png in Resources */,
 				FFF13CA4184AA15A001E6480 /* step1_background.png in Resources */,
-				FFF13CA0184A9F37001E6480 /* @step1_background.png in Resources */,
+				FFF13CA0184A9F37001E6480 /* step1_background@2x.png in Resources */,
 				FFF13C99184A91C2001E6480 /* @btn_background.png in Resources */,
 				64602D551849FC89001E3C73 /* Images.xcassets in Resources */,
 				64602D471849FC89001E3C73 /* InfoPlist.strings in Resources */,
