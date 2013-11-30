@@ -22,8 +22,6 @@
 @synthesize matserView = _matserView;
 @synthesize photosView = _photosView;
 @synthesize musicView = _musicView;
-@synthesize doneButton = _doneButton;
-@synthesize imgPicker = _imgPicker;
 @synthesize musicPicker = _musicPicker;
 @synthesize buttonAjouter = _buttonAjouter;
 @synthesize imageView = _imageView;
@@ -31,17 +29,22 @@
 @synthesize labelTitre = _labelTitre;
 @synthesize progressView = _progressView;
 @synthesize url = _url;
+@synthesize controller = _controller;
+@synthesize library = _library;
+@synthesize image = _image;
+@synthesize imageArray = _imageArray;
+
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
-    //Initialization imgPicker:
-    _imgPicker = [[UIImagePickerController alloc] init];
-    [_imgPicker setAllowsEditing:YES];
-    [_imgPicker setDelegate:self];
-    [_imgPicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    //initialisation imagepicker
+    _library = [[ALAssetsLibrary alloc] init];
+    _controller = [[WSAssetPickerController alloc] initWithAssetsLibrary:_library];
+    [_controller setDelegate:self];
     
     //Initialisation musicPicker
     _musicPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
@@ -69,14 +72,7 @@
 //--------------------Action des controlleur------------------
 
 - (IBAction)didAjouter:(UIButton *)sender {
-    [self presentViewController:_imgPicker animated:YES completion:nil];
-    
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask ,YES);
-    NSString* documentsPath = [paths objectAtIndex:0];
-    NSString* dataFile = [documentsPath stringByAppendingPathComponent:@"UserCustomPotraitPic1.jpg"];
-    
-    NSData *potraitImgData = [NSData dataWithContentsOfFile:dataFile];
-    //backgroundImagePotrait = [UIImage imageWithData:potraitImgData];
+    [self presentViewController:_controller animated:YES completion:NULL];
 }
 
 - (IBAction)didAjouterMusic:(UIButton *)sender {
@@ -92,48 +88,36 @@
     }
 }
 
+- (IBAction)didNext:(id)sender{
+    UIStoryboard *storyBoard = self.storyboard;
+    
+    CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
+    [self presentViewController:calibrateController animated:YES completion:nil];
+}
+
 
 //---------------Methode Delegate ImagePickerView------------------
-
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+- (void)assetPickerControllerDidCancel:(WSAssetPickerController *)sender
 {
-    NSLog(@"Inside navigationController ...");
-    if (!_doneButton)
-    {
-        _doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(saveImagesDone:)];
-    }
-    
-    viewController.navigationItem.rightBarButtonItem = _doneButton;
+    // Dismiss the WSAssetPickerController.
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (IBAction)saveImagesDone:(id)sender
+- (void)assetPickerController:(WSAssetPickerController *)sender didFinishPickingMediaWithAssets:(NSArray *)assets
 {
-    NSLog(@"saveImagesDone ...");
-    //Fermer le pickerView
-    [[_imgPicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage : (UIImage *)image editingInfo:(NSDictionary *)editingInfo
-{
+    _imageArray = [NSMutableArray array];
     
-    _IMAGE_COUNTER = _IMAGE_COUNTER + 1;
-    NSLog(@"didFinishPickingImage ...");
-    _imageView.image = image;
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        //Construction du tableau dimage
+        for (ALAsset *asset in assets) {
+            [_imageArray addObject:[[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullResolutionImage]];
+        }
+        
+        //Affichage de limage 1
+        self.image = [_imageArray objectAtIndex:0];
+        [self.imageView setImage:self.image];
+    }];
     
-    // Get the data for the image
-    NSData* imageData = UIImageJPEGRepresentation(image, 1.0);
-    
-    
-    // Give a name to the file
-    NSString* incrementedImgStr = [NSString stringWithFormat: @"img%d.jpg", _IMAGE_COUNTER];
-    
-    
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* documentsDirectory = [paths objectAtIndex:0];
-    // Now we get the full path to the file
-    NSString* fullPathToFile2 = [documentsDirectory stringByAppendingPathComponent:incrementedImgStr];
-    
-    [imageData writeToFile:fullPathToFile2 atomically:NO];
 }
 
 //----------------Methode delegate Music PickerView
@@ -163,17 +147,4 @@
     
     [_audioPlayer play];
 }
-
-//---------------Methode delegate audioplayer-------------
-
-//---------------Methode Pour listener button-------------
-- (IBAction)didNext:(id)sender{
-    UIStoryboard *storyBoard = self.storyboard;
-    
-    CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
-    [self presentViewController:calibrateController animated:YES completion:nil];
-}
-
-
-
 @end

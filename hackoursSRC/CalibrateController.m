@@ -46,6 +46,7 @@
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:_musicUrl error:&error];
     [self playMusic];
     
+    
     // Start Timing
     _start = [[NSDate alloc] init];
     _start = [NSDate date];

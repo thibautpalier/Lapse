@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644B4E77184A4F4A009F77F7 /* WSAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E68184A4F4A009F77F7 /* WSAlbumTableViewController.m */; };
+		644B4E78184A4F4A009F77F7 /* WSAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E6C184A4F4A009F77F7 /* WSAssetPickerController.m */; };
+		644B4E79184A4F4A009F77F7 /* WSAssetPickerState.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E6E184A4F4A009F77F7 /* WSAssetPickerState.m */; };
+		644B4E7A184A4F4A009F77F7 /* WSAssetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E70184A4F4A009F77F7 /* WSAssetsTableViewCell.m */; };
+		644B4E7B184A4F4A009F77F7 /* WSAssetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E72184A4F4A009F77F7 /* WSAssetTableViewController.m */; };
+		644B4E7C184A4F4A009F77F7 /* WSAssetViewColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E74184A4F4A009F77F7 /* WSAssetViewColumn.m */; };
+		644B4E7D184A4F4A009F77F7 /* WSAssetWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E76184A4F4A009F77F7 /* WSAssetWrapper.m */; };
+		644B4E80184A5329009F77F7 /* WSAssetViewSelectionIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 644B4E7E184A5329009F77F7 /* WSAssetViewSelectionIndicator.png */; };
+		644B4E81184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 644B4E7F184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png */; };
 		64602D3D1849FC89001E3C73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D3C1849FC89001E3C73 /* Foundation.framework */; };
 		64602D3F1849FC89001E3C73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D3E1849FC89001E3C73 /* CoreGraphics.framework */; };
 		64602D411849FC89001E3C73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D401849FC89001E3C73 /* UIKit.framework */; };
@@ -21,7 +30,6 @@
 		64602D5E1849FC89001E3C73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D401849FC89001E3C73 /* UIKit.framework */; };
 		64602D661849FC89001E3C73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64602D641849FC89001E3C73 /* InfoPlist.strings */; };
 		64602D681849FC89001E3C73 /* hackoursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64602D671849FC89001E3C73 /* hackoursTests.m */; };
-		64602D74184A1F6D001E3C73 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 64602D73184A1F6D001E3C73 /* AudioPlayer.m */; };
 		FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5E8C28184A5DED0096FE93 /* CalibrateController.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +44,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		644B4E67184A4F4A009F77F7 /* WSAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAlbumTableViewController.h; sourceTree = "<group>"; };
+		644B4E68184A4F4A009F77F7 /* WSAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAlbumTableViewController.m; sourceTree = "<group>"; };
+		644B4E69184A4F4A009F77F7 /* WSAssetPicker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WSAssetPicker-Prefix.pch"; sourceTree = "<group>"; };
+		644B4E6A184A4F4A009F77F7 /* WSAssetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetPicker.h; sourceTree = "<group>"; };
+		644B4E6B184A4F4A009F77F7 /* WSAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetPickerController.h; sourceTree = "<group>"; };
+		644B4E6C184A4F4A009F77F7 /* WSAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetPickerController.m; sourceTree = "<group>"; };
+		644B4E6D184A4F4A009F77F7 /* WSAssetPickerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetPickerState.h; sourceTree = "<group>"; };
+		644B4E6E184A4F4A009F77F7 /* WSAssetPickerState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetPickerState.m; sourceTree = "<group>"; };
+		644B4E6F184A4F4A009F77F7 /* WSAssetsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetsTableViewCell.h; sourceTree = "<group>"; };
+		644B4E70184A4F4A009F77F7 /* WSAssetsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetsTableViewCell.m; sourceTree = "<group>"; };
+		644B4E71184A4F4A009F77F7 /* WSAssetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetTableViewController.h; sourceTree = "<group>"; };
+		644B4E72184A4F4A009F77F7 /* WSAssetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetTableViewController.m; sourceTree = "<group>"; };
+		644B4E73184A4F4A009F77F7 /* WSAssetViewColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetViewColumn.h; sourceTree = "<group>"; };
+		644B4E74184A4F4A009F77F7 /* WSAssetViewColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetViewColumn.m; sourceTree = "<group>"; };
+		644B4E75184A4F4A009F77F7 /* WSAssetWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetWrapper.h; sourceTree = "<group>"; };
+		644B4E76184A4F4A009F77F7 /* WSAssetWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetWrapper.m; sourceTree = "<group>"; };
+		644B4E7E184A5329009F77F7 /* WSAssetViewSelectionIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSAssetViewSelectionIndicator.png; sourceTree = "<group>"; };
+		644B4E7F184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WSAssetViewSelectionIndicator@2x.png"; sourceTree = "<group>"; };
 		64602D391849FC89001E3C73 /* hackours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64602D3C1849FC89001E3C73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		64602D3E1849FC89001E3C73 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,8 +81,6 @@
 		64602D631849FC89001E3C73 /* hackoursTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hackoursTests-Info.plist"; sourceTree = "<group>"; };
 		64602D651849FC89001E3C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64602D671849FC89001E3C73 /* hackoursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackoursTests.m; sourceTree = "<group>"; };
-		64602D72184A1F6D001E3C73 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
-		64602D73184A1F6D001E3C73 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		FF5E8C27184A5DED0096FE93 /* CalibrateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalibrateController.h; path = ../CalibrateController.h; sourceTree = "<group>"; };
 		FF5E8C28184A5DED0096FE93 /* CalibrateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalibrateController.m; path = ../CalibrateController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +109,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		644B4E66184A4F4A009F77F7 /* WSassetLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				644B4E67184A4F4A009F77F7 /* WSAlbumTableViewController.h */,
+				644B4E68184A4F4A009F77F7 /* WSAlbumTableViewController.m */,
+				644B4E69184A4F4A009F77F7 /* WSAssetPicker-Prefix.pch */,
+				644B4E6A184A4F4A009F77F7 /* WSAssetPicker.h */,
+				644B4E6B184A4F4A009F77F7 /* WSAssetPickerController.h */,
+				644B4E6C184A4F4A009F77F7 /* WSAssetPickerController.m */,
+				644B4E6D184A4F4A009F77F7 /* WSAssetPickerState.h */,
+				644B4E6E184A4F4A009F77F7 /* WSAssetPickerState.m */,
+				644B4E6F184A4F4A009F77F7 /* WSAssetsTableViewCell.h */,
+				644B4E70184A4F4A009F77F7 /* WSAssetsTableViewCell.m */,
+				644B4E71184A4F4A009F77F7 /* WSAssetTableViewController.h */,
+				644B4E72184A4F4A009F77F7 /* WSAssetTableViewController.m */,
+				644B4E73184A4F4A009F77F7 /* WSAssetViewColumn.h */,
+				644B4E74184A4F4A009F77F7 /* WSAssetViewColumn.m */,
+				644B4E75184A4F4A009F77F7 /* WSAssetWrapper.h */,
+				644B4E76184A4F4A009F77F7 /* WSAssetWrapper.m */,
+			);
+			path = WSassetLibrary;
+			sourceTree = "<group>";
+		};
 		64602D301849FC89001E3C73 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +165,7 @@
 		64602D421849FC89001E3C73 /* hackours */ = {
 			isa = PBXGroup;
 			children = (
-				64602D71184A1F28001E3C73 /* Tool Classes */,
+				644B4E66184A4F4A009F77F7 /* WSassetLibrary */,
 				64602D4B1849FC89001E3C73 /* AppDelegate.h */,
 				FF5E8C27184A5DED0096FE93 /* CalibrateController.h */,
 				FF5E8C28184A5DED0096FE93 /* CalibrateController.m */,
@@ -127,6 +174,8 @@
 				64602D511849FC89001E3C73 /* ViewController.h */,
 				64602D521849FC89001E3C73 /* ViewController.m */,
 				64602D541849FC89001E3C73 /* Images.xcassets */,
+				644B4E7E184A5329009F77F7 /* WSAssetViewSelectionIndicator.png */,
+				644B4E7F184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png */,
 				64602D431849FC89001E3C73 /* Supporting Files */,
 			);
 			path = hackours;
@@ -159,15 +208,6 @@
 				64602D641849FC89001E3C73 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		64602D71184A1F28001E3C73 /* Tool Classes */ = {
-			isa = PBXGroup;
-			children = (
-				64602D72184A1F6D001E3C73 /* AudioPlayer.h */,
-				64602D73184A1F6D001E3C73 /* AudioPlayer.m */,
-			);
-			name = "Tool Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +286,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644B4E80184A5329009F77F7 /* WSAssetViewSelectionIndicator.png in Resources */,
+				644B4E81184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png in Resources */,
 				64602D551849FC89001E3C73 /* Images.xcassets in Resources */,
 				64602D471849FC89001E3C73 /* InfoPlist.strings in Resources */,
 				64602D501849FC89001E3C73 /* Main.storyboard in Resources */,
@@ -270,8 +312,14 @@
 				FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */,
 				64602D531849FC89001E3C73 /* ViewController.m in Sources */,
 				64602D4D1849FC89001E3C73 /* AppDelegate.m in Sources */,
+				644B4E7A184A4F4A009F77F7 /* WSAssetsTableViewCell.m in Sources */,
+				644B4E7C184A4F4A009F77F7 /* WSAssetViewColumn.m in Sources */,
+				644B4E78184A4F4A009F77F7 /* WSAssetPickerController.m in Sources */,
+				644B4E7D184A4F4A009F77F7 /* WSAssetWrapper.m in Sources */,
+				644B4E77184A4F4A009F77F7 /* WSAlbumTableViewController.m in Sources */,
 				64602D491849FC89001E3C73 /* main.m in Sources */,
-				64602D74184A1F6D001E3C73 /* AudioPlayer.m in Sources */,
+				644B4E7B184A4F4A009F77F7 /* WSAssetTableViewController.m in Sources */,
+				644B4E79184A4F4A009F77F7 /* WSAssetPickerState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
