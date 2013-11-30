@@ -92,6 +92,13 @@
     UIStoryboard *storyBoard = self.storyboard;
     
     CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
+    
+    // Tester null pour choix music
+    [calibrateController setMusicUrl:_url];
+    
+    // Tester null pour choix images (10 mini);
+    [calibrateController setImageArray:_imageArray];
+    
     [self presentViewController:calibrateController animated:YES completion:nil];
 }
 

@@ -21,9 +21,11 @@
 @property (nonatomic) int tapNumber;
 @property (weak, nonatomic) NSURL *musicUrl;
 
-
 //AudioPlayer
 @property AVAudioPlayer *audioPlayer;
+
+//output
+@property (strong, nonatomic) NSMutableArray *imageArray;
 
 // Methods
 - (void)calculEcart;

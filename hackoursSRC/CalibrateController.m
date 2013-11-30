@@ -20,6 +20,7 @@
 @synthesize tapNumber = _tapNumber;
 @synthesize musicUrl = _musicUrl;
 @synthesize audioPlayer = _audioPlayer;
+@synthesize imageArray = _imageArray;
 
 
 
@@ -44,7 +45,7 @@
     // Commencer a lire musique
     NSError *error;
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:_musicUrl error:&error];
-    [self playMusic];
+    [_audioPlayer play];
     
     
     // Start Timing
@@ -100,10 +101,6 @@
     NSLog(@"Average : %f", average);
 }
 
-// ------------ Lecteur audio ----------
-- (void) playMusic{
-    [_audioPlayer play];
-}
 
 
 @end
