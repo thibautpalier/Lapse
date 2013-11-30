@@ -15,6 +15,9 @@
 
 @interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MPMediaPickerControllerDelegate, AVAudioPlayerDelegate, WSAssetPickerControllerDelegate>
 
+//output
+@property (strong, nonatomic) NSMutableArray *imageArray;
+
 
 //Vue Conteneur
 @property (strong, nonatomic) IBOutlet UIView *matserView;

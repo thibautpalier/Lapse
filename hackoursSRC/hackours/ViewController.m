@@ -31,11 +31,13 @@
 @synthesize controller = _controller;
 @synthesize library = _library;
 @synthesize image = _image;
+@synthesize imageArray = _imageArray;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
     //initialisation imagepicker
     _library = [[ALAssetsLibrary alloc] init];
@@ -84,6 +86,13 @@
     }
 }
 
+- (IBAction)didNext:(id)sender{
+    UIStoryboard *storyBoard = self.storyboard;
+    
+    CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
+    [self presentViewController:calibrateController animated:YES completion:nil];
+}
+
 
 //---------------Methode Delegate ImagePickerView------------------
 - (void)assetPickerControllerDidCancel:(WSAssetPickerController *)sender
@@ -94,25 +103,16 @@
 
 - (void)assetPickerController:(WSAssetPickerController *)sender didFinishPickingMediaWithAssets:(NSArray *)assets
 {
-    
-    
-    /*
-    for (ALAsset *asset in assets) {
-        image = [[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullResolutionImage];
-    }
-     */
-    
-    //NSString *imgUrl = [[assets objectAtIndex:1] valueForProperty:ALAssetPropertyURLs];
-    
-    //_image = [[UIImage alloc] initWithCGImage:[[[assets objectAtIndex:0] defaultRepresentation] fullScreenImage]];
-    
-    /*CGImageRef images = [[[assets objectAtIndex:0] defaultRepresentation] fullScreenImage];
-    if (images){
-        _image = [UIImage imageWithCGImage:images];
-    }*/
+    _imageArray = [NSMutableArray array];
     
     [self dismissViewControllerAnimated:YES completion:^(void){
-        self.image = [[UIImage alloc] initWithCGImage:[[[assets objectAtIndex:0] defaultRepresentation] fullResolutionImage]];
+        //Construction du tableau dimage
+        for (ALAsset *asset in assets) {
+            [_imageArray addObject:[[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullResolutionImage]];
+        }
+        
+        //Affichage de limage 1
+        self.image = [_imageArray objectAtIndex:0];
         [self.imageView setImage:self.image];
     }];
     
@@ -145,17 +145,4 @@
     
     [_audioPlayer play];
 }
-
-//---------------Methode delegate audioplayer-------------
-
-//---------------Methode Pour listener button-------------
-- (IBAction)didNext:(id)sender{
-    UIStoryboard *storyBoard = self.storyboard;
-    
-    CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
-    [self presentViewController:calibrateController animated:YES completion:nil];
-}
-
-
-
 @end

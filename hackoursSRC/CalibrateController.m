@@ -40,6 +40,7 @@
     
     // Commencer a lire musique
     
+    
     // Start Timing
     _start = [[NSDate alloc] init];
     _start = [NSDate date];

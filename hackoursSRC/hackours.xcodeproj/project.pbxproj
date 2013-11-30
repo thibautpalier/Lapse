@@ -30,7 +30,6 @@
 		64602D5E1849FC89001E3C73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D401849FC89001E3C73 /* UIKit.framework */; };
 		64602D661849FC89001E3C73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64602D641849FC89001E3C73 /* InfoPlist.strings */; };
 		64602D681849FC89001E3C73 /* hackoursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64602D671849FC89001E3C73 /* hackoursTests.m */; };
-		64602D74184A1F6D001E3C73 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 64602D73184A1F6D001E3C73 /* AudioPlayer.m */; };
 		FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5E8C28184A5DED0096FE93 /* CalibrateController.m */; };
 /* End PBXBuildFile section */
 
@@ -82,8 +81,6 @@
 		64602D631849FC89001E3C73 /* hackoursTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hackoursTests-Info.plist"; sourceTree = "<group>"; };
 		64602D651849FC89001E3C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64602D671849FC89001E3C73 /* hackoursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackoursTests.m; sourceTree = "<group>"; };
-		64602D72184A1F6D001E3C73 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
-		64602D73184A1F6D001E3C73 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		FF5E8C27184A5DED0096FE93 /* CalibrateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalibrateController.h; path = ../CalibrateController.h; sourceTree = "<group>"; };
 		FF5E8C28184A5DED0096FE93 /* CalibrateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalibrateController.m; path = ../CalibrateController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				644B4E66184A4F4A009F77F7 /* WSassetLibrary */,
-				64602D71184A1F28001E3C73 /* Tool Classes */,
 				64602D4B1849FC89001E3C73 /* AppDelegate.h */,
 				FF5E8C27184A5DED0096FE93 /* CalibrateController.h */,
 				FF5E8C28184A5DED0096FE93 /* CalibrateController.m */,
@@ -212,15 +208,6 @@
 				64602D641849FC89001E3C73 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		64602D71184A1F28001E3C73 /* Tool Classes */ = {
-			isa = PBXGroup;
-			children = (
-				64602D72184A1F6D001E3C73 /* AudioPlayer.h */,
-				64602D73184A1F6D001E3C73 /* AudioPlayer.m */,
-			);
-			name = "Tool Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +320,6 @@
 				64602D491849FC89001E3C73 /* main.m in Sources */,
 				644B4E7B184A4F4A009F77F7 /* WSAssetTableViewController.m in Sources */,
 				644B4E79184A4F4A009F77F7 /* WSAssetPickerState.m in Sources */,
-				64602D74184A1F6D001E3C73 /* AudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
