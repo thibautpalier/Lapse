@@ -31,11 +31,11 @@
 		64602D5E1849FC89001E3C73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64602D401849FC89001E3C73 /* UIKit.framework */; };
 		64602D661849FC89001E3C73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64602D641849FC89001E3C73 /* InfoPlist.strings */; };
 		64602D681849FC89001E3C73 /* hackoursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64602D671849FC89001E3C73 /* hackoursTests.m */; };
+		FF2EEF6D184AB0B40099A645 /* tap_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2EEF6C184AB0B40099A645 /* tap_button@2x.png */; };
+		FF2EEF6F184AB1220099A645 /* step3_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2EEF6E184AB1220099A645 /* step3_background@2x.png */; };
 		FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5E8C28184A5DED0096FE93 /* CalibrateController.m */; };
-		FF655C9B184AAA3300DE91A6 /* step1_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF655C9A184AAA3300DE91A6 /* step1_background@2x.png */; };
-		FFF13C99184A91C2001E6480 /* @btn_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C98184A91C2001E6480 /* @btn_background.png */; };
+		FF655C9B184AAA3300DE91A6 /* step2_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF655C9A184AAA3300DE91A6 /* step2_background@2x.png */; };
 		FFF13C9C184A9212001E6480 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF13C9B184A9212001E6480 /* Colors.m */; };
-		FFF13C9E184A9422001E6480 /* @step1.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C9D184A9422001E6480 /* @step1.png */; };
 		FFF13CA4184AA15A001E6480 /* step1_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13CA3184AA159001E6480 /* step1_background.png */; };
 /* End PBXBuildFile section */
 
@@ -89,13 +89,13 @@
 		64602D631849FC89001E3C73 /* hackoursTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hackoursTests-Info.plist"; sourceTree = "<group>"; };
 		64602D651849FC89001E3C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64602D671849FC89001E3C73 /* hackoursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackoursTests.m; sourceTree = "<group>"; };
+		FF2EEF6C184AB0B40099A645 /* tap_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap_button@2x.png"; sourceTree = "<group>"; };
+		FF2EEF6E184AB1220099A645 /* step3_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step3_background@2x.png"; sourceTree = "<group>"; };
 		FF5E8C27184A5DED0096FE93 /* CalibrateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalibrateController.h; path = ../CalibrateController.h; sourceTree = "<group>"; };
 		FF5E8C28184A5DED0096FE93 /* CalibrateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalibrateController.m; path = ../CalibrateController.m; sourceTree = "<group>"; };
-		FF655C9A184AAA3300DE91A6 /* step1_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step1_background@2x.png"; sourceTree = "<group>"; };
-		FFF13C98184A91C2001E6480 /* @btn_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@btn_background.png"; sourceTree = "<group>"; };
+		FF655C9A184AAA3300DE91A6 /* step2_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step2_background@2x.png"; sourceTree = "<group>"; };
 		FFF13C9A184A9212001E6480 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		FFF13C9B184A9212001E6480 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
-		FFF13C9D184A9422001E6480 /* @step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@step1.png"; sourceTree = "<group>"; };
 		FFF13CA3184AA159001E6480 /* step1_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,10 +202,10 @@
 		64602D431849FC89001E3C73 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FF655C9A184AAA3300DE91A6 /* step1_background@2x.png */,
+				FF2EEF6E184AB1220099A645 /* step3_background@2x.png */,
+				FF2EEF6C184AB0B40099A645 /* tap_button@2x.png */,
+				FF655C9A184AAA3300DE91A6 /* step2_background@2x.png */,
 				FFF13CA3184AA159001E6480 /* step1_background.png */,
-				FFF13C9D184A9422001E6480 /* @step1.png */,
-				FFF13C98184A91C2001E6480 /* @btn_background.png */,
 				64602D441849FC89001E3C73 /* hackours-Info.plist */,
 				64602D451849FC89001E3C73 /* InfoPlist.strings */,
 				64602D481849FC89001E3C73 /* main.m */,
@@ -309,13 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				644B4E80184A5329009F77F7 /* WSAssetViewSelectionIndicator.png in Resources */,
-				FFF13C9E184A9422001E6480 /* @step1.png in Resources */,
 				644B4E81184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png in Resources */,
 				FFF13CA4184AA15A001E6480 /* step1_background.png in Resources */,
-				FFF13C99184A91C2001E6480 /* @btn_background.png in Resources */,
-				FF655C9B184AAA3300DE91A6 /* step1_background@2x.png in Resources */,
+				FF655C9B184AAA3300DE91A6 /* step2_background@2x.png in Resources */,
+				FF2EEF6D184AB0B40099A645 /* tap_button@2x.png in Resources */,
 				64602D551849FC89001E3C73 /* Images.xcassets in Resources */,
 				64602D471849FC89001E3C73 /* InfoPlist.strings in Resources */,
+				FF2EEF6F184AB1220099A645 /* step3_background@2x.png in Resources */,
 				64602D501849FC89001E3C73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,7 +26,9 @@
 @synthesize imageArray = _imageArray;
 @synthesize interval = _interval;
 
-
+-(void)viewWillAppear:(BOOL)animated {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"step3_background.png"]];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

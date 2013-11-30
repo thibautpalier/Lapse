@@ -38,7 +38,7 @@
    // CAGradientLayer *bgLayer = [Colors blueGradient];
    // bgLayer.frame = self.view.bounds;
    // [self.view.layer insertSublayer:bgLayer atIndex:0];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"step1_background.png"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"step2_background.png"]];
 }
 
 - (void)viewDidLoad
