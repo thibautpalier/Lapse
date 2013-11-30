@@ -106,7 +106,7 @@
     }
     //remplacer 9 par le nombre de tap necessaire
     _interval = average / 9;
-    NSLog(@"Average : %f", average);
+    NSLog(@"Average : %f", _interval);
     [self callNextViewController];
 }
 
