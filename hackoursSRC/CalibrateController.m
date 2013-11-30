@@ -18,9 +18,12 @@
 @synthesize timingsFromDate = _timingsFromDate;
 @synthesize start = _start;
 @synthesize tapNumber = _tapNumber;
-@synthesize musicUrl = _musicUrl;
 @synthesize audioPlayer = _audioPlayer;
+
+// Variable en transit pour VideoMaker
+@synthesize musicUrl = _musicUrl;
 @synthesize imageArray = _imageArray;
+@synthesize interval = _interval;
 
 
 
@@ -65,6 +68,8 @@
 
 
 - (IBAction)didTap:(id)sender {
+    
+    //remplacer 9 par le nombre de tap necessaire
     if (_tapNumber > 9) {
         NSLog(@"End");
         [self calculEcart];
@@ -80,7 +85,7 @@
 // --------------- Calculs --------------
 
 - (void)calculEcart{
-    
+        //remplacer 9 par le nombre de tap necessaire
     for (int i = 0; i < 10 ; i++) {
         if (i == 0) {
             [_timings addObject:[_timingsFromDate objectAtIndex:i]];
@@ -94,11 +99,27 @@
     }
     
     double average = 0;
+        //remplacer 9 par le nombre de tap necessaire
     for (int j = 1; j < 10 ; j++) {
         average = average + [[_timings objectAtIndex:j]doubleValue];
     }
-    average = average / 9;
+    //remplacer 9 par le nombre de tap necessaire
+    _interval = average / 9;
     NSLog(@"Average : %f", average);
+}
+
+- (void) callNextViewController{
+    UIStoryboard *storyBoard = self.storyboard;
+    
+    //CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
+    
+    // Tester null pour choix music
+    //[calibrateController setMusicUrl:_url];
+    
+    // Tester null pour choix images (10 mini);
+    //[calibrateController setImageArray:_imageArray];
+    
+    //[self presentViewController:calibrateController animated:YES completion:nil];
 }
 
 

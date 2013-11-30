@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSDate *start;
 @property (nonatomic) int tapNumber;
 @property (weak, nonatomic) NSURL *musicUrl;
+@property double interval;
 
 //AudioPlayer
 @property AVAudioPlayer *audioPlayer;
@@ -30,5 +31,6 @@
 // Methods
 - (void)calculEcart;
 - (IBAction)didTap:(id)sender;
-- (void) playMusic;
+- (void) callNextViewController;
+
 @end
