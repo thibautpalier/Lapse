@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CalibrateController.h"
 
 @interface ViewController ()
 
@@ -90,6 +91,7 @@
     }
 }
 
+
 //---------------Methode Delegate ImagePickerView------------------
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -162,6 +164,14 @@
 }
 
 //---------------Methode delegate audioplayer-------------
+
+//---------------Methode Pour listener button-------------
+- (IBAction)didNext:(id)sender{
+    UIStoryboard *storyBoard = self.storyboard;
+    
+    CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
+    [self presentViewController:calibrateController animated:YES completion:nil];
+}
 
 
 

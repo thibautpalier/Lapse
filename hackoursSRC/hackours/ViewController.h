@@ -46,5 +46,7 @@
 - (IBAction)didAjouterMusic:(UIButton *)sender;
 - (IBAction)didPlay:(UIButton *)sender;
 
+- (IBAction)didNext:(id)sender;
+
 
 @end
