@@ -11,6 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "Colors.h"
 
 
 @interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MPMediaPickerControllerDelegate, AVAudioPlayerDelegate, WSAssetPickerControllerDelegate>

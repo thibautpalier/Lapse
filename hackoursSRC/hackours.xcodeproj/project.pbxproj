@@ -32,6 +32,11 @@
 		64602D661849FC89001E3C73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64602D641849FC89001E3C73 /* InfoPlist.strings */; };
 		64602D681849FC89001E3C73 /* hackoursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64602D671849FC89001E3C73 /* hackoursTests.m */; };
 		FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5E8C28184A5DED0096FE93 /* CalibrateController.m */; };
+		FFF13C99184A91C2001E6480 /* @btn_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C98184A91C2001E6480 /* @btn_background.png */; };
+		FFF13C9C184A9212001E6480 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF13C9B184A9212001E6480 /* Colors.m */; };
+		FFF13C9E184A9422001E6480 /* @step1.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C9D184A9422001E6480 /* @step1.png */; };
+		FFF13CA0184A9F37001E6480 /* @step1_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13C9F184A9F37001E6480 /* @step1_background.png */; };
+		FFF13CA4184AA15A001E6480 /* step1_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF13CA3184AA159001E6480 /* step1_background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,12 @@
 		64602D671849FC89001E3C73 /* hackoursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackoursTests.m; sourceTree = "<group>"; };
 		FF5E8C27184A5DED0096FE93 /* CalibrateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalibrateController.h; path = ../CalibrateController.h; sourceTree = "<group>"; };
 		FF5E8C28184A5DED0096FE93 /* CalibrateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalibrateController.m; path = ../CalibrateController.m; sourceTree = "<group>"; };
+		FFF13C98184A91C2001E6480 /* @btn_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@btn_background.png"; sourceTree = "<group>"; };
+		FFF13C9A184A9212001E6480 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		FFF13C9B184A9212001E6480 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
+		FFF13C9D184A9422001E6480 /* @step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@step1.png"; sourceTree = "<group>"; };
+		FFF13C9F184A9F37001E6480 /* @step1_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@step1_background.png"; sourceTree = "<group>"; };
+		FFF13CA3184AA159001E6480 /* step1_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +193,8 @@
 				64602D431849FC89001E3C73 /* Supporting Files */,
 				644B4E82184A82F3009F77F7 /* VideoMakerViewController.h */,
 				644B4E83184A82F3009F77F7 /* VideoMakerViewController.m */,
+				FFF13C9A184A9212001E6480 /* Colors.h */,
+				FFF13C9B184A9212001E6480 /* Colors.m */,
 			);
 			path = hackours;
 			sourceTree = "<group>";
@@ -189,6 +202,10 @@
 		64602D431849FC89001E3C73 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FFF13CA3184AA159001E6480 /* step1_background.png */,
+				FFF13C9F184A9F37001E6480 /* @step1_background.png */,
+				FFF13C9D184A9422001E6480 /* @step1.png */,
+				FFF13C98184A91C2001E6480 /* @btn_background.png */,
 				64602D441849FC89001E3C73 /* hackours-Info.plist */,
 				64602D451849FC89001E3C73 /* InfoPlist.strings */,
 				64602D481849FC89001E3C73 /* main.m */,
@@ -292,7 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				644B4E80184A5329009F77F7 /* WSAssetViewSelectionIndicator.png in Resources */,
+				FFF13C9E184A9422001E6480 /* @step1.png in Resources */,
 				644B4E81184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png in Resources */,
+				FFF13CA4184AA15A001E6480 /* step1_background.png in Resources */,
+				FFF13CA0184A9F37001E6480 /* @step1_background.png in Resources */,
+				FFF13C99184A91C2001E6480 /* @btn_background.png in Resources */,
 				64602D551849FC89001E3C73 /* Images.xcassets in Resources */,
 				64602D471849FC89001E3C73 /* InfoPlist.strings in Resources */,
 				64602D501849FC89001E3C73 /* Main.storyboard in Resources */,
@@ -314,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF13C9C184A9212001E6480 /* Colors.m in Sources */,
 				FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */,
 				64602D531849FC89001E3C73 /* ViewController.m in Sources */,
 				64602D4D1849FC89001E3C73 /* AppDelegate.m in Sources */,

@@ -34,7 +34,12 @@
 @synthesize image = _image;
 @synthesize imageArray = _imageArray;
 
-
+-(void)viewWillAppear:(BOOL)animated {
+   // CAGradientLayer *bgLayer = [Colors blueGradient];
+   // bgLayer.frame = self.view.bounds;
+   // [self.view.layer insertSublayer:bgLayer atIndex:0];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"step1_background.png"]];
+}
 
 - (void)viewDidLoad
 {
