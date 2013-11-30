@@ -7,6 +7,7 @@
 //
 
 #import "CalibrateController.h"
+#import "VideoMakerViewController.h"
 
 @interface CalibrateController ()
 
@@ -106,20 +107,20 @@
     //remplacer 9 par le nombre de tap necessaire
     _interval = average / 9;
     NSLog(@"Average : %f", average);
+    [self callNextViewController];
 }
 
 - (void) callNextViewController{
     UIStoryboard *storyBoard = self.storyboard;
     
-    //CalibrateController *calibrateController = [storyBoard instantiateViewControllerWithIdentifier:@"CalibrateController"];
+    VideoMakerViewController *videoMakerViewController = [storyBoard instantiateViewControllerWithIdentifier:@"VideoMakerViewController"];
     
-    // Tester null pour choix music
-    //[calibrateController setMusicUrl:_url];
     
-    // Tester null pour choix images (10 mini);
-    //[calibrateController setImageArray:_imageArray];
+    [videoMakerViewController setMusicUrl:_musicUrl];
+    [videoMakerViewController setImageArray:_imageArray];
+    [videoMakerViewController setInterval:_interval];
     
-    //[self presentViewController:calibrateController animated:YES completion:nil];
+    [self presentViewController:videoMakerViewController animated:YES completion:nil];
 }
 
 

@@ -14,6 +14,11 @@
 
 @implementation VideoMakerViewController
 
+// Video ingredient's
+@synthesize musicUrl = _musicUrl;
+@synthesize imageArray = _imageArray;
+@synthesize interval = _interval;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
