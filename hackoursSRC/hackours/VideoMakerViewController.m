@@ -18,6 +18,7 @@
 @synthesize musicUrl = _musicUrl;
 @synthesize imageArray = _imageArray;
 @synthesize interval = _interval;
+@synthesize videoURL = _videoURL;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,11 +38,14 @@
     
     NSString *fileName = [NSString stringWithFormat:@"%@.mp4", @"video"];
     NSString *fullPath = [documentsDir stringByAppendingPathComponent:fileName];
+    _videoURL = [NSURL fileURLWithPath:fullPath];
     
     CGSize size = CGSizeMake(640, 480);
     [self writeImagesToMovieAtPath:fullPath withSize:size];
     
-    printf("Start import Music");
+    printf("Start import Music \n");
+    
+    [self mergeAndSave];
 
     //[self CompileFilesToMakeMovie];
 }
@@ -186,99 +190,46 @@
     return pxbuffer;
 }
 
-/*
--(void)CompileFilesToMakeMovie
-{
-    AVMutableComposition* mixComposition = [AVMutableComposition composition];
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
-    NSString *documentsDir = [paths objectAtIndex:0];
-    NSString *fileNameVideo = [NSString stringWithFormat:@"%@.mp4", @"video"];
-    NSString *fullPathVideo = [documentsDir stringByAppendingPathComponent:fileNameVideo];
-    NSURL*    video_inputFileUrl = [NSURL fileURLWithPath:fullPathVideo];
 
-    NSString *fileNameOutput = [NSString stringWithFormat:@"%@.mp4", @"output"];
-    NSString *fullPathOutput = [documentsDir stringByAppendingPathComponent:fileNameOutput];
-    NSURL* outputFileUrl = [NSURL fileURLWithPath:fullPathOutput];
-    
-    if ([[NSFileManager defaultManager] fileExistsAtPath:fullPathOutput])
-        [[NSFileManager defaultManager] removeItemAtPath:fullPathOutput error:nil];
-    
-    
-    
-    CMTime nextClipStartTime = kCMTimeZero;
-    
-    AVURLAsset* videoAsset = [[AVURLAsset alloc]initWithURL:video_inputFileUrl options:nil];
-    CMTimeRange video_timeRange = CMTimeRangeMake(kCMTimeZero,videoAsset.duration);
-    AVMutableCompositionTrack *a_compositionVideoTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
-    [a_compositionVideoTrack insertTimeRange:video_timeRange ofTrack:[[videoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:nextClipStartTime error:nil];
-    
-    //nextClipStartTime = CMTimeAdd(nextClipStartTime, a_timeRange.duration);
-    
-    AVURLAsset* audioAsset = [[AVURLAsset alloc]initWithURL:_musicUrl options:nil];
-    CMTimeRange audio_timeRange = CMTimeRangeMake(kCMTimeZero, audioAsset.duration);
-    AVMutableCompositionTrack *b_compositionAudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
-    [b_compositionAudioTrack insertTimeRange:audio_timeRange ofTrack:[[audioAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0] atTime:nextClipStartTime error:nil];
-    
-    
-    
-    AVAssetExportSession* _assetExport = [[AVAssetExportSession alloc] initWithAsset:mixComposition presetName:AVAssetExportPresetHighestQuality];
-    _assetExport.outputFileType = @"com.apple.quicktime-movie";
-    _assetExport.outputURL = outputFileUrl;
-    
-    
-    printf("Stop import Music");
-    
-    [_assetExport exportAsynchronouslyWithCompletionHandler:
-     ^(void ) {
-         //self saveVideoToAlbum:outputFilePath];
-         NSData * movieData = [NSData dataWithContentsOfURL:outputFileUrl];
-         [movieData writeToURL:outputFileUrl atomically:FALSE];
-     }       
-     ];
-}
-*/
 
-/*
 -(void)mergeAndSave{
-    if (firstAsset !=nil && secondAsset!=nil) {
-        [activityView startAnimating];
-        // 1 - Create AVMutableComposition object. This object will hold your AVMutableCompositionTrack instances.
-        AVMutableComposition *mixComposition = [[AVMutableComposition alloc] init];
-        // 2 - Video track
-        AVMutableCompositionTrack *firstTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo
-                                                                            preferredTrackID:kCMPersistentTrackID_Invalid];
-        [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, firstAsset.duration)
-                            ofTrack:[[firstAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:kCMTimeZero error:nil];
-        [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, secondAsset.duration)
-                            ofTrack:[[secondAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:firstAsset.duration error:nil];
-        // 3 - Audio track
-        if (audioAsset!=nil){
-            AVMutableCompositionTrack *AudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
-                                                                                preferredTrackID:kCMPersistentTrackID_Invalid];
-            [AudioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, CMTimeAdd(firstAsset.duration, secondAsset.duration))
-                                ofTrack:[[audioAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0] atTime:kCMTimeZero error:nil];
-        }
-        // 4 - Get path
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *myPathDocs =  [documentsDirectory stringByAppendingPathComponent:
-                                 [NSString stringWithFormat:@"mergeVideo-%d.mov",arc4random() % 1000]];
-        NSURL *url = [NSURL fileURLWithPath:myPathDocs];
-        // 5 - Create exporter
-        AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition
-                                                                          presetName:AVAssetExportPresetHighestQuality];
-        exporter.outputURL=url;
-        exporter.outputFileType = AVFileTypeQuickTimeMovie;
-        exporter.shouldOptimizeForNetworkUse = YES;
-        [exporter exportAsynchronouslyWithCompletionHandler:^{
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self exportDidFinish:exporter];
-            });
-        }];
-    }
+    
+    AVURLAsset *videoAsset = [[AVURLAsset alloc] initWithURL:_videoURL options:nil];
+    AVURLAsset *audioAsset = [[AVURLAsset alloc] initWithURL:_musicUrl options:nil];
+    
+    AVMutableComposition *mixComposition = [[AVMutableComposition alloc] init];
+    
+    
+    //Video Track
+    NSError *error;
+    AVMutableCompositionTrack *firstTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+    [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, videoAsset.duration) ofTrack:[[videoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:kCMTimeZero error:&error];
+    
+    
+    //Audio Track
+    AVMutableCompositionTrack *AudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
+    [AudioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, videoAsset.duration) ofTrack:[[audioAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0] atTime:kCMTimeZero error:&error];
+    
+    //getPath
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *myPathDocs =  [documentsDirectory stringByAppendingPathComponent: [NSString stringWithFormat:@"mergeVideo-%d.mov",arc4random() % 1000]];
+    NSURL *url = [NSURL fileURLWithPath:myPathDocs];
+    
+    //exporter
+    AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition presetName:AVAssetExportPresetHighestQuality];
+    exporter.outputURL=url;
+    exporter.outputFileType = AVFileTypeQuickTimeMovie;
+    exporter.shouldOptimizeForNetworkUse = YES;
+    
+    [exporter exportAsynchronouslyWithCompletionHandler:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //[self exportDidFinish:exporter];
+            printf("export end \n");
+        });
+    }];
 }
- */
+
 
 - (void)didReceiveMemoryWarning
 {
