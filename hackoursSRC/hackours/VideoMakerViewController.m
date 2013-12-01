@@ -40,7 +40,7 @@
     NSString *fullPath = [documentsDir stringByAppendingPathComponent:fileName];
     _videoURL = [NSURL fileURLWithPath:fullPath];
     
-    CGSize size = CGSizeMake(640, 480);
+    CGSize size = CGSizeMake(800, 600);
     [self writeImagesToMovieAtPath:fullPath withSize:size];
     
     printf("Start import Music \n");
@@ -72,11 +72,7 @@
                                                               error:&error];
     NSParameterAssert(videoWriter);
     
-    NSDictionary *videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   AVVideoCodecH264, AVVideoCodecKey,
-                                   [NSNumber numberWithInt:size.width], AVVideoWidthKey,
-                                   [NSNumber numberWithInt:size.height], AVVideoHeightKey,
-                                   nil];
+    NSDictionary *videoSettings = [NSDictionary dictionaryWithObjectsAndKeys: AVVideoCodecH264, AVVideoCodecKey, [NSNumber numberWithInt:size.width], AVVideoWidthKey, [NSNumber numberWithInt:size.height], AVVideoHeightKey, nil];
     
     
     AVAssetWriterInput* videoWriterInput = [AVAssetWriterInput
@@ -108,8 +104,12 @@
     
     int frameCount = 0;
     
+    
     for(int i = 0; i<[_imageArray count]; i++)
     {
+        UIImage *imgh = [_imageArray objectAtIndex:i];
+        printf("Height %f \n", imgh.size.height);
+        printf("Widht %f \n", imgh.size.width);
         buffer = [self pixelBufferFromCGImage:[[_imageArray objectAtIndex:i] CGImage] andSize:size];
         
         BOOL append_ok = NO;
@@ -172,16 +172,14 @@
     NSParameterAssert(pxdata != NULL);
     
     CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(pxdata, size.width,
-                                                 size.height, 8, 4*size.width, rgbColorSpace,
-                                                 kCGImageAlphaNoneSkipFirst);
+    CGContextRef context = CGBitmapContextCreate(pxdata, size.width, size.height, 8, 4*size.width , rgbColorSpace, kCGImageAlphaNoneSkipFirst);
  
-//    CGAffineTransform transform;
-//    
-//    NSParameterAssert(context);
-//    CGContextConcatCTM(context, transform);
-    CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(image),
-                                           CGImageGetHeight(image)), image);
+
+    //NSParameterAssert(context);
+    //CGContextConcatCTM(context, transform);
+    
+    //CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(image), CGImageGetHeight(image)), image);
+    CGContextDrawImage(context, CGRectMake(0, 0, size.width, size.height), image);
     CGColorSpaceRelease(rgbColorSpace);
     CGContextRelease(context);
     

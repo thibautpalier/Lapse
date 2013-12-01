@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643A8D56184B010400C0DB3C /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643A8D45184B010400C0DB3C /* ELCAlbumPickerController.m */; };
+		643A8D57184B010400C0DB3C /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 643A8D47184B010400C0DB3C /* ELCAsset.m */; };
+		643A8D58184B010400C0DB3C /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 643A8D49184B010400C0DB3C /* ELCAssetCell.m */; };
+		643A8D59184B010400C0DB3C /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 643A8D4D184B010400C0DB3C /* ELCAssetTablePicker.m */; };
+		643A8D5A184B010400C0DB3C /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643A8D4F184B010400C0DB3C /* ELCImagePickerController.m */; };
+		643A8D5B184B010400C0DB3C /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643A8D51184B010400C0DB3C /* ELCAlbumPickerController.xib */; };
+		643A8D5C184B010400C0DB3C /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643A8D52184B010400C0DB3C /* ELCAssetPicker.xib */; };
+		643A8D5D184B010400C0DB3C /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643A8D53184B010400C0DB3C /* ELCAssetTablePicker.xib */; };
+		643A8D5E184B010400C0DB3C /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 643A8D54184B010400C0DB3C /* Overlay.png */; };
+		643A8D5F184B010400C0DB3C /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 643A8D55184B010400C0DB3C /* Overlay@2x.png */; };
 		644B4E77184A4F4A009F77F7 /* WSAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E68184A4F4A009F77F7 /* WSAlbumTableViewController.m */; };
 		644B4E78184A4F4A009F77F7 /* WSAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E6C184A4F4A009F77F7 /* WSAssetPickerController.m */; };
 		644B4E79184A4F4A009F77F7 /* WSAssetPickerState.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B4E6E184A4F4A009F77F7 /* WSAssetPickerState.m */; };
@@ -50,6 +60,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		643A8D44184B010400C0DB3C /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
+		643A8D45184B010400C0DB3C /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
+		643A8D46184B010400C0DB3C /* ELCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAsset.h; sourceTree = "<group>"; };
+		643A8D47184B010400C0DB3C /* ELCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAsset.m; sourceTree = "<group>"; };
+		643A8D48184B010400C0DB3C /* ELCAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetCell.h; sourceTree = "<group>"; };
+		643A8D49184B010400C0DB3C /* ELCAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetCell.m; sourceTree = "<group>"; };
+		643A8D4A184B010400C0DB3C /* ELCAssetPickerFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetPickerFilterDelegate.h; sourceTree = "<group>"; };
+		643A8D4B184B010400C0DB3C /* ELCAssetSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetSelectionDelegate.h; sourceTree = "<group>"; };
+		643A8D4C184B010400C0DB3C /* ELCAssetTablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetTablePicker.h; sourceTree = "<group>"; };
+		643A8D4D184B010400C0DB3C /* ELCAssetTablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetTablePicker.m; sourceTree = "<group>"; };
+		643A8D4E184B010400C0DB3C /* ELCImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCImagePickerController.h; sourceTree = "<group>"; };
+		643A8D4F184B010400C0DB3C /* ELCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCImagePickerController.m; sourceTree = "<group>"; };
+		643A8D51184B010400C0DB3C /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
+		643A8D52184B010400C0DB3C /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
+		643A8D53184B010400C0DB3C /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
+		643A8D54184B010400C0DB3C /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
+		643A8D55184B010400C0DB3C /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
 		644B4E67184A4F4A009F77F7 /* WSAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAlbumTableViewController.h; sourceTree = "<group>"; };
 		644B4E68184A4F4A009F77F7 /* WSAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAlbumTableViewController.m; sourceTree = "<group>"; };
 		644B4E69184A4F4A009F77F7 /* WSAssetPicker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WSAssetPicker-Prefix.pch"; sourceTree = "<group>"; };
@@ -123,6 +150,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643A8D43184B010400C0DB3C /* ELCImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				643A8D44184B010400C0DB3C /* ELCAlbumPickerController.h */,
+				643A8D45184B010400C0DB3C /* ELCAlbumPickerController.m */,
+				643A8D46184B010400C0DB3C /* ELCAsset.h */,
+				643A8D47184B010400C0DB3C /* ELCAsset.m */,
+				643A8D48184B010400C0DB3C /* ELCAssetCell.h */,
+				643A8D49184B010400C0DB3C /* ELCAssetCell.m */,
+				643A8D4A184B010400C0DB3C /* ELCAssetPickerFilterDelegate.h */,
+				643A8D4B184B010400C0DB3C /* ELCAssetSelectionDelegate.h */,
+				643A8D4C184B010400C0DB3C /* ELCAssetTablePicker.h */,
+				643A8D4D184B010400C0DB3C /* ELCAssetTablePicker.m */,
+				643A8D4E184B010400C0DB3C /* ELCImagePickerController.h */,
+				643A8D4F184B010400C0DB3C /* ELCImagePickerController.m */,
+				643A8D50184B010400C0DB3C /* Resources */,
+			);
+			path = ELCImagePicker;
+			sourceTree = "<group>";
+		};
+		643A8D50184B010400C0DB3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				643A8D51184B010400C0DB3C /* ELCAlbumPickerController.xib */,
+				643A8D52184B010400C0DB3C /* ELCAssetPicker.xib */,
+				643A8D53184B010400C0DB3C /* ELCAssetTablePicker.xib */,
+				643A8D54184B010400C0DB3C /* Overlay.png */,
+				643A8D55184B010400C0DB3C /* Overlay@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		644B4E66184A4F4A009F77F7 /* WSassetLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +238,7 @@
 		64602D421849FC89001E3C73 /* hackours */ = {
 			isa = PBXGroup;
 			children = (
+				643A8D43184B010400C0DB3C /* ELCImagePicker */,
 				644B4E66184A4F4A009F77F7 /* WSassetLibrary */,
 				64602D4B1849FC89001E3C73 /* AppDelegate.h */,
 				FF5E8C27184A5DED0096FE93 /* CalibrateController.h */,
@@ -308,13 +368,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643A8D5C184B010400C0DB3C /* ELCAssetPicker.xib in Resources */,
+				643A8D5B184B010400C0DB3C /* ELCAlbumPickerController.xib in Resources */,
 				644B4E80184A5329009F77F7 /* WSAssetViewSelectionIndicator.png in Resources */,
 				644B4E81184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png in Resources */,
 				FF2EEF6D184AB0B40099A645 /* tap_button@2x.png in Resources */,
+				643A8D5F184B010400C0DB3C /* Overlay@2x.png in Resources */,
 				64602D551849FC89001E3C73 /* Images.xcassets in Resources */,
+				643A8D5D184B010400C0DB3C /* ELCAssetTablePicker.xib in Resources */,
 				FF2EEF7B184ABDEC0099A645 /* vide@2x.png in Resources */,
 				64602D471849FC89001E3C73 /* InfoPlist.strings in Resources */,
 				FF2EEF89184AC80A0099A645 /* step3_background@2x.png in Resources */,
+				643A8D5E184B010400C0DB3C /* Overlay.png in Resources */,
 				FF2EEF8B184AC9940099A645 /* step2_background@2x.png in Resources */,
 				64602D501849FC89001E3C73 /* Main.storyboard in Resources */,
 			);
@@ -337,16 +402,21 @@
 			files = (
 				FFF13C9C184A9212001E6480 /* Colors.m in Sources */,
 				FF5E8C29184A5DED0096FE93 /* CalibrateController.m in Sources */,
+				643A8D5A184B010400C0DB3C /* ELCImagePickerController.m in Sources */,
 				64602D531849FC89001E3C73 /* ViewController.m in Sources */,
 				64602D4D1849FC89001E3C73 /* AppDelegate.m in Sources */,
 				644B4E84184A82F3009F77F7 /* VideoMakerViewController.m in Sources */,
 				644B4E7A184A4F4A009F77F7 /* WSAssetsTableViewCell.m in Sources */,
 				644B4E7C184A4F4A009F77F7 /* WSAssetViewColumn.m in Sources */,
 				644B4E78184A4F4A009F77F7 /* WSAssetPickerController.m in Sources */,
+				643A8D56184B010400C0DB3C /* ELCAlbumPickerController.m in Sources */,
 				644B4E7D184A4F4A009F77F7 /* WSAssetWrapper.m in Sources */,
 				644B4E77184A4F4A009F77F7 /* WSAlbumTableViewController.m in Sources */,
+				643A8D59184B010400C0DB3C /* ELCAssetTablePicker.m in Sources */,
 				64602D491849FC89001E3C73 /* main.m in Sources */,
 				644B4E7B184A4F4A009F77F7 /* WSAssetTableViewController.m in Sources */,
+				643A8D58184B010400C0DB3C /* ELCAssetCell.m in Sources */,
+				643A8D57184B010400C0DB3C /* ELCAsset.m in Sources */,
 				644B4E79184A4F4A009F77F7 /* WSAssetPickerState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

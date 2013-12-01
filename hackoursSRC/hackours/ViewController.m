@@ -45,6 +45,7 @@
 {
     [super viewDidLoad];
     
+    _imageArray = [NSMutableArray array];
     
     //initialisation imagepicker
     _library = [[ALAssetsLibrary alloc] init];
@@ -61,7 +62,7 @@
     
     //Initialisation progressbar
     [_progressView setProgress:0.0];
-    sleep(3);
+    sleep(1);
 }
 
 //Ptogression de la bar de lecture
@@ -78,7 +79,12 @@
 //--------------------Action des controlleur------------------
 
 - (IBAction)didAjouter:(UIButton *)sender {
-    [self presentViewController:_controller animated:YES completion:NULL];
+    //[self presentViewController:_controller animated:YES completion:NULL];
+    ELCImagePickerController *elcPiker = [[ELCImagePickerController alloc] init];
+    elcPiker.maximumImagesCount = 500;
+    elcPiker.imagePickerDelegate = self;
+    
+     [self presentViewController:elcPiker animated:YES completion:nil];
 }
 
 - (IBAction)didAjouterMusic:(UIButton *)sender {
@@ -125,8 +131,12 @@
     
     [self dismissViewControllerAnimated:YES completion:^(void){
         //Construction du tableau dimage
+        UIImage *imgFull;
+        CGSize size = CGSizeMake(640, 480);
         for (ALAsset *asset in assets) {
-            [_imageArray addObject:[[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullResolutionImage]];
+            imgFull = [[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullScreenImage];
+            
+            [_imageArray addObject:[self imageWithImage:imgFull scaledToSize:size]];
         }
         
         //Affichage de limage 1
@@ -134,6 +144,36 @@
         [self.imageView setImage:self.image];
     }];
     
+}
+
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    printf("resize \n");
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    printf("Height %f \n", newImage.size.height);
+    printf("Widht %f \n", newImage.size.width);
+    
+    return newImage;
+}
+
+- (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info{
+    
+    //_imageArray = [NSMutableArray arrayWithCapacity:[info count]];
+	
+    UIImage *imgFull;
+    CGSize size = CGSizeMake(800, 600);
+
+	for (NSDictionary *dict in info) {
+        imgFull = [dict objectForKey:UIImagePickerControllerOriginalImage];
+        [_imageArray addObject:[self imageWithImage:imgFull scaledToSize:size]];
+    }
+    
+    self.image = [_imageArray objectAtIndex:0];
+    [self.imageView setImage:self.image];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //----------------Methode delegate Music PickerView

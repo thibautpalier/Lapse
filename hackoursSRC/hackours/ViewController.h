@@ -12,9 +12,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "Colors.h"
+#import "ELCImagePickerController.h"
 
 
-@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MPMediaPickerControllerDelegate, AVAudioPlayerDelegate, WSAssetPickerControllerDelegate>
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MPMediaPickerControllerDelegate, AVAudioPlayerDelegate, WSAssetPickerControllerDelegate, ELCImagePickerControllerDelegate>
 
 //output
 @property (strong, nonatomic) NSMutableArray *imageArray;
