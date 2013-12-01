@@ -39,18 +39,8 @@
                                 <rect key="frame" x="0.0" y="480" width="320" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJv-mP-zFX">
-                                        <rect key="frame" x="10" y="52" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Play">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didPlay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tLC-i3-I63"/>
-                                        </connections>
-                                    </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hkt-J6-HZ8">
-                                        <rect key="frame" x="74" y="66" width="226" height="2"/>
+                                        <rect key="frame" x="10" y="66" width="290" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </progressView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre Musique" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vC-oc-UwV">
@@ -122,7 +112,6 @@
                     </view>
                     <connections>
                         <outlet property="buttonAjouterMusic" destination="9T0-lc-ahT" id="2XB-7a-TD7"/>
-                        <outlet property="buttonPlay" destination="UJv-mP-zFX" id="IgG-A9-rvs"/>
                         <outlet property="imageView" destination="hnU-jY-zvw" id="295-yW-PMg"/>
                         <outlet property="labelDuration" destination="04h-uj-wq2" id="Yx5-yv-akQ"/>
                         <outlet property="labelTitre" destination="2vC-oc-UwV" id="Nx9-FR-2bB"/>
