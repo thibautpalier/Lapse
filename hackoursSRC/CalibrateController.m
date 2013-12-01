@@ -15,6 +15,7 @@
 
 @implementation CalibrateController
 @synthesize tapButton = _tapButton;
+@synthesize tapCountDown = _tapCountDown;
 @synthesize timings = _timings;
 @synthesize timingsFromDate = _timingsFromDate;
 @synthesize start = _start;
@@ -81,6 +82,11 @@
         NSNumber *a = [NSNumber numberWithDouble:timeIntervalWithDate];
         [_timingsFromDate addObject:a];
         _tapNumber ++;
+        NSString *text = [_tapCountDown text];
+        int value = [text intValue];
+        value --;
+        text = [[NSString alloc] initWithFormat:@"%d", value];
+        [_tapCountDown setText:text];
     }
 }
 
@@ -110,6 +116,8 @@
     _interval = average / 9;
     _interval = fabs(_interval);
     NSLog(@"Average : %f", _interval);
+     //Stop the music
+    [_audioPlayer stop];
     [self callNextViewController];
 }
 

@@ -189,6 +189,7 @@
                     </view>
                     <connections>
                         <outlet property="tapButton" destination="hwg-Ct-SWY" id="7aF-tD-fwW"/>
+                        <outlet property="tapCountDown" destination="QBH-uO-YVH" id="wDo-uq-TJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUT-Q4-Ik5" userLabel="First Responder" sceneMemberID="firstResponder"/>

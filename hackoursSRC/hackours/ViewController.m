@@ -112,7 +112,7 @@
     [calibrateController setImageArray:_imageArray];
     
     //Stop Audio
-    [_audioPlayer stop];
+    //[_audioPlayer stop];
     
     [self presentViewController:calibrateController animated:YES completion:nil];
 }

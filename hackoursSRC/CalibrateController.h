@@ -15,6 +15,7 @@
 
 //Properties
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
+@property (weak, nonatomic) IBOutlet UILabel *tapCountDown;
 @property (strong, nonatomic) NSMutableArray *timings;
 @property (strong, nonatomic) NSMutableArray *timingsFromDate;
 @property (strong, nonatomic) NSDate *start;
