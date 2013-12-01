@@ -19,6 +19,7 @@
 @synthesize imageArray = _imageArray;
 @synthesize interval = _interval;
 @synthesize videoURL = _videoURL;
+@synthesize finalVideoUrl = _finalVideoUrl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +47,8 @@
     printf("Start import Music \n");
     
     [self mergeAndSave];
+    
+    [self play];
 
     //[self CompileFilesToMakeMovie];
 }
@@ -212,11 +215,11 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *myPathDocs =  [documentsDirectory stringByAppendingPathComponent: [NSString stringWithFormat:@"mergeVideo-%d.mov",arc4random() % 1000]];
-    NSURL *url = [NSURL fileURLWithPath:myPathDocs];
+    _finalVideoUrl = [NSURL fileURLWithPath:myPathDocs];
     
     //exporter
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition presetName:AVAssetExportPresetHighestQuality];
-    exporter.outputURL=url;
+    exporter.outputURL=_finalVideoUrl;
     exporter.outputFileType = AVFileTypeQuickTimeMovie;
     exporter.shouldOptimizeForNetworkUse = YES;
     
@@ -226,6 +229,18 @@
             printf("export end \n");
         });
     }];
+}
+
+-(void)play{
+    MPMoviePlayerController *player = [[MPMoviePlayerController alloc] init];
+    player.shouldAutoplay = YES;
+    player.repeatMode = MPMovieRepeatModeNone;
+    player.fullscreen = YES;
+    player.movieSourceType = MPMovieSourceTypeFile;
+    player.scalingMode = MPMovieScalingModeAspectFit;
+    player.contentURL = _finalVideoUrl;
+    [self.view addSubview:player.view];
+    [player play];
 }
 
 

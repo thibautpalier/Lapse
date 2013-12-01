@@ -17,5 +17,6 @@
 @property (weak, nonatomic) NSURL *musicUrl;
 @property double interval;
 @property NSURL *videoURL;
+@property NSURL *finalVideoUrl;
 
 @end
