@@ -44,7 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     
     //initialisation imagepicker
     _library = [[ALAssetsLibrary alloc] init];
