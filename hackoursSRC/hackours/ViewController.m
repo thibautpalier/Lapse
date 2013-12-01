@@ -61,6 +61,7 @@
     
     //Initialisation progressbar
     [_progressView setProgress:0.0];
+    sleep(3);
 }
 
 //Ptogression de la bar de lecture
