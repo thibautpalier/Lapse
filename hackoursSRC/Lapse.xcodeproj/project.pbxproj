@@ -97,23 +97,23 @@
 		644B4E7F184A5329009F77F7 /* WSAssetViewSelectionIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WSAssetViewSelectionIndicator@2x.png"; sourceTree = "<group>"; };
 		644B4E82184A82F3009F77F7 /* VideoMakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMakerViewController.h; sourceTree = "<group>"; };
 		644B4E83184A82F3009F77F7 /* VideoMakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMakerViewController.m; sourceTree = "<group>"; };
-		64602D391849FC89001E3C73 /* hackours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackours.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64602D391849FC89001E3C73 /* Lapse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lapse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64602D3C1849FC89001E3C73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		64602D3E1849FC89001E3C73 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		64602D401849FC89001E3C73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		64602D441849FC89001E3C73 /* hackours-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hackours-Info.plist"; sourceTree = "<group>"; };
+		64602D441849FC89001E3C73 /* Lapse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lapse-Info.plist"; sourceTree = "<group>"; };
 		64602D461849FC89001E3C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64602D481849FC89001E3C73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		64602D4A1849FC89001E3C73 /* hackours-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hackours-Prefix.pch"; sourceTree = "<group>"; };
+		64602D4A1849FC89001E3C73 /* Lapse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lapse-Prefix.pch"; sourceTree = "<group>"; };
 		64602D4B1849FC89001E3C73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		64602D4C1849FC89001E3C73 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		64602D4F1849FC89001E3C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64602D511849FC89001E3C73 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		64602D521849FC89001E3C73 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		64602D541849FC89001E3C73 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		64602D5A1849FC89001E3C73 /* hackoursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackoursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64602D5A1849FC89001E3C73 /* LapseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LapseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64602D5B1849FC89001E3C73 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		64602D631849FC89001E3C73 /* hackoursTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hackoursTests-Info.plist"; sourceTree = "<group>"; };
+		64602D631849FC89001E3C73 /* LapseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LapseTests-Info.plist"; sourceTree = "<group>"; };
 		64602D651849FC89001E3C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64602D671849FC89001E3C73 /* hackoursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackoursTests.m; sourceTree = "<group>"; };
 		FF2EEF6C184AB0B40099A645 /* tap_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap_button@2x.png"; sourceTree = "<group>"; };
@@ -218,8 +218,8 @@
 		64602D3A1849FC89001E3C73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64602D391849FC89001E3C73 /* hackours.app */,
-				64602D5A1849FC89001E3C73 /* hackoursTests.xctest */,
+				64602D391849FC89001E3C73 /* Lapse.app */,
+				64602D5A1849FC89001E3C73 /* LapseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,10 +266,10 @@
 				FF2EEF88184AC80A0099A645 /* step3_background@2x.png */,
 				FF2EEF7A184ABDEC0099A645 /* vide@2x.png */,
 				FF2EEF6C184AB0B40099A645 /* tap_button@2x.png */,
-				64602D441849FC89001E3C73 /* hackours-Info.plist */,
+				64602D441849FC89001E3C73 /* Lapse-Info.plist */,
 				64602D451849FC89001E3C73 /* InfoPlist.strings */,
 				64602D481849FC89001E3C73 /* main.m */,
-				64602D4A1849FC89001E3C73 /* hackours-Prefix.pch */,
+				64602D4A1849FC89001E3C73 /* Lapse-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 		64602D621849FC89001E3C73 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				64602D631849FC89001E3C73 /* hackoursTests-Info.plist */,
+				64602D631849FC89001E3C73 /* LapseTests-Info.plist */,
 				64602D641849FC89001E3C73 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -295,9 +295,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		64602D381849FC89001E3C73 /* hackours */ = {
+		64602D381849FC89001E3C73 /* Lapse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64602D6B1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "hackours" */;
+			buildConfigurationList = 64602D6B1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "Lapse" */;
 			buildPhases = (
 				64602D351849FC89001E3C73 /* Sources */,
 				64602D361849FC89001E3C73 /* Frameworks */,
@@ -307,14 +307,14 @@
 			);
 			dependencies = (
 			);
-			name = hackours;
+			name = Lapse;
 			productName = hackours;
-			productReference = 64602D391849FC89001E3C73 /* hackours.app */;
+			productReference = 64602D391849FC89001E3C73 /* Lapse.app */;
 			productType = "com.apple.product-type.application";
 		};
-		64602D591849FC89001E3C73 /* hackoursTests */ = {
+		64602D591849FC89001E3C73 /* LapseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64602D6E1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "hackoursTests" */;
+			buildConfigurationList = 64602D6E1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "LapseTests" */;
 			buildPhases = (
 				64602D561849FC89001E3C73 /* Sources */,
 				64602D571849FC89001E3C73 /* Frameworks */,
@@ -325,9 +325,9 @@
 			dependencies = (
 				64602D601849FC89001E3C73 /* PBXTargetDependency */,
 			);
-			name = hackoursTests;
+			name = LapseTests;
 			productName = hackoursTests;
-			productReference = 64602D5A1849FC89001E3C73 /* hackoursTests.xctest */;
+			productReference = 64602D5A1849FC89001E3C73 /* LapseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -339,12 +339,15 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Thibault Palier";
 				TargetAttributes = {
+					64602D381849FC89001E3C73 = {
+						DevelopmentTeam = 23MK493LXS;
+					};
 					64602D591849FC89001E3C73 = {
 						TestTargetID = 64602D381849FC89001E3C73;
 					};
 				};
 			};
-			buildConfigurationList = 64602D341849FC89001E3C73 /* Build configuration list for PBXProject "hackours" */;
+			buildConfigurationList = 64602D341849FC89001E3C73 /* Build configuration list for PBXProject "Lapse" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -357,8 +360,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				64602D381849FC89001E3C73 /* hackours */,
-				64602D591849FC89001E3C73 /* hackoursTests */,
+				64602D381849FC89001E3C73 /* Lapse */,
+				64602D591849FC89001E3C73 /* LapseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -434,7 +437,7 @@
 /* Begin PBXTargetDependency section */
 		64602D601849FC89001E3C73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 64602D381849FC89001E3C73 /* hackours */;
+			target = 64602D381849FC89001E3C73 /* Lapse */;
 			targetProxy = 64602D5F1849FC89001E3C73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -544,10 +547,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "hackours/hackours-Prefix.pch";
-				INFOPLIST_FILE = "hackours/hackours-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "hackours/Lapse-Prefix.pch";
+				INFOPLIST_FILE = "hackours/Lapse-Info.plist";
+				PRODUCT_NAME = Lapse;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -557,10 +561,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "hackours/hackours-Prefix.pch";
-				INFOPLIST_FILE = "hackours/hackours-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "hackours/Lapse-Prefix.pch";
+				INFOPLIST_FILE = "hackours/Lapse-Info.plist";
+				PRODUCT_NAME = Lapse;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -581,8 +586,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "hackoursTests/hackoursTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "hackoursTests/LapseTests-Info.plist";
+				PRODUCT_NAME = LapseTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -600,8 +605,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hackours/hackours-Prefix.pch";
-				INFOPLIST_FILE = "hackoursTests/hackoursTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "hackoursTests/LapseTests-Info.plist";
+				PRODUCT_NAME = LapseTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -610,7 +615,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64602D341849FC89001E3C73 /* Build configuration list for PBXProject "hackours" */ = {
+		64602D341849FC89001E3C73 /* Build configuration list for PBXProject "Lapse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64602D691849FC89001E3C73 /* Debug */,
@@ -619,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64602D6B1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "hackours" */ = {
+		64602D6B1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "Lapse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64602D6C1849FC89001E3C73 /* Debug */,
@@ -628,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64602D6E1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "hackoursTests" */ = {
+		64602D6E1849FC89001E3C73 /* Build configuration list for PBXNativeTarget "LapseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64602D6F1849FC89001E3C73 /* Debug */,
